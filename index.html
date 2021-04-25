@@ -16,7 +16,40 @@
 	<p>2021年4月8日 更新<p>
 <p>欢迎来到窗边五一666的个人网站！我们欢迎您！基于Github Pages<的永久，免费官网</p>
 <p>  杨顺凯  李宣尚  施展  郭鑫蕊  姜尚博  曲阳  姚致远  刘妍杉  已看</p>
-	 <p>👇我的B站主页👇<p>
+    <style type="text/css">
+        .div1,div{
+            width: 1350px;
+            margin:0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1" id="div1">
+        <!-- 创建昵称和留言文本框 -->
+        <span>昵称：</span><input type="text" id="user" name="user">
+        <br>
+        <span>留言：</span><textarea id="lang"></textarea><br>
+        <!-- 创建提交评价按钮 -->
+        <input type="button" value="提交评价" id="btn">
+    </div>
+</body>
+<script type="text/javascript">
+    //通过id属性查找标签节点
+    var user=document.getElementById('user');
+    var lang=document.getElementById('lang');
+    //通过id属性查找提交评价按钮并绑定点击事件
+    document.getElementById('btn').onclick=function(){
+        //在html代码中创建一个div盒子
+        var cont=document.createElement('div');
+        //将获取到的数据，放到一创建好的盒子中
+        cont.innerHTML='<p>'+user.value+':'+lang.value+'</p><hr>';
+        //将创建好的div盒子及及内容显示在页面中
+        document.getElementById('div1').appendChild(cont);
+        user.value='';
+        lang.value='';
+    }
+</script>
+	<p>👇我的B站主页👇<p>
  <div id="u-ad-banner-top5" class="u-ad">
 			<a href="https://space.bilibili.com/604132083" target="_blank">
 				<img src="https://sun-nb.github.io/pic001.png" />
